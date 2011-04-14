@@ -56,7 +56,7 @@ public class BackstagePassesUpdateQualityTest {
     @Test
     public void quality_is_zero_when_the_sold_date_has_passed() {
         Item backstagePass = aBackstagePass().withQuality(20)
-                                             .withSellIn(0)
+                                             .withSellIn(-1)
                                              .build();
 
         updateQuality(Arrays.asList(backstagePass));
